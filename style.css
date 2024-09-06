@@ -1,0 +1,237 @@
+/* Base Styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(135deg, #E3F2F5 0%, #B2EBF2 100%);
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+/* Container */
+.wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+/* Header */
+header {
+	height: 60px;
+	background: linear-gradient(135deg, #34495E 0%, #2C3E50 100%);
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 100;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+  float: left;
+  line-height: 50px;
+  display: flex; /* Use flexbox to align items properly */
+  align-items: center; /* Vertically center the logo and links */
+}
+
+nav a {
+	color: #fff;
+	font-size: 18px;
+	text-decoration: none;
+	padding: 10px;
+	transition: color 0.3s ease;
+}
+
+nav a:hover:not(.active), .active {
+	color: #F39C12;
+}
+
+/* Footer */
+footer {
+  height: 40px;
+  background: linear-gradient(135deg, #34495E 0%, #2C3E50 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+}
+
+/* Main Content */
+.content-area, .content-area-simple {
+	width: 100%;
+	background-color: #E3F2F5;
+	padding: 80px 20px 20px; /* Adjusted for header */
+}
+
+.begin-quiz{
+  width: auto;
+  height: 60px;
+  border-radius: 20px;
+}
+
+.content-area h2, .content-area-simple h2 {
+	font-size: 36px;
+	color: #34495E;
+	margin-bottom: 20px;
+}
+
+.content-area h3, .content-area-simple h3 {
+	font-size: 30px;
+	color: #3498DB;
+	margin-bottom: 20px;
+}
+
+.content-area p, .content-area-simple p {
+	text-align: left;
+	color: #555;
+	font-size: 18px;
+	line-height: 1.6;
+	margin-bottom: 20px;
+}
+
+/* Buttons */
+button {
+  background-color: #3498DB;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Button Styling */
+.button1, .button2, .button3, .button4, .button5 {
+  border-radius: 20px;  /* Softened the border radius for a smoother look */
+  padding: 20px 30px;   /* Adjusted padding for better text alignment */
+  font-size: 25px;      /* Slightly reduced font size for balanced text spacing */
+  background-color: #1ABC9C;
+  color: white;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Deepened shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 20px; /* Add spacing between the buttons and other content */
+}
+
+.button1:hover, .button2:hover, .button3:hover, .button4:hover, .button5:hover {
+  transform: scale(1.08); /* Increased hover effect for more interaction */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Elevated shadow on hover */
+  background-color: #16A085; /* Slightly darker hover background */
+}
+
+/* Adjust spacing between the text box and the buttons */
+.info-box {
+  margin-bottom: 30px; /* Adds space below the text box */
+}
+
+/* Image Styling */
+.quiz-pics {
+  height: 270px;
+  width: 40%;
+  margin: 5px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.quiz-pics:hover {
+  transform: scale(1.05);
+}
+
+/* Cluster Styles */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Container settings for rows */
+.row1, .row2, .row3, .row4 {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  margin-bottom: 20px; /* Adds spacing between rows */
+}
+
+/* Image styling */
+.container img {
+  width: 100%; /* Ensures images are responsive */
+  max-width: 200px; /* Limits the maximum width of images */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 10px; /* Rounded corners for images */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effects */
+}
+
+/* Hover effect for images */
+.container img:hover {
+  transform: scale(1.05); /* Slightly enlarges the image on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deepens shadow on hover */
+}
+
+/* Text styling */
+.agr, .arc, .arts, .bus, .edu, .gov, .health, .hos, .human, .it, .law, .manu, .stem, .transpo {
+  padding: 10px 15px;
+  border-radius: 10px;
+  background-color: #3498DB;
+  color: #FFF;
+  font-size: 16px; /* Adjusted for balance with image size */
+  font-weight: 600;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-align: center;
+  margin: 5px; /* Added spacing around text blocks */
+  width: 200px; /* Fixed width to align with images */
+}
+
+/* Hover effect for text blocks */
+.agr:hover, .arc:hover, .arts:hover, .bus:hover, .edu:hover, .gov:hover, .health:hover, .hos:hover, .human:hover, .it:hover, .law:hover, .manu:hover, .stem:hover, .transpo:hover {
+  background-color: #1ABC9C;
+  transform: translateY(-5px); /* Lift on hover */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .row1, .row2, .row3, .row4 {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    align-items: center;
+  }
+
+  .agr, .arc, .arts, .bus, .edu, .gov, .health, .hos, .human, .it, .law, .manu, .stem, .transpo {
+    width: 90%; /* Full-width for better display on smaller screens */
+  }
+
+  .container img {
+    max-width: 150px; /* Smaller max width for images on smaller screens */
+  }
+}
+
+/* Info Box */
+.info-box {
+  background-color: #FFF;
+  color: #333;
+  border: 2px solid #2980B9;
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-box p {
+  text-align: center;
+  color: #3498DB;
+}
